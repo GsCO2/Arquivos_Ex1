@@ -23,7 +23,7 @@ public class ArquivosController implements IArquivosController{
 			while((linha = buffer.readLine()) != null) {
 				if(linha.contains("Fruits")) {
 					String[] v = linha.split(";");
-					System.out.println(v[0] + "\t" + v[1] + "\t" + v[2]);
+					System.out.println(v[0] + "\t" + v[1] + "\t" + v[3]);
 				}
 			}
 			buffer.close();
