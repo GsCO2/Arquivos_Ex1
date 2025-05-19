@@ -14,6 +14,10 @@ public class ArquivosController implements IArquivosController{
 
 	@Override
 	public void readFile(String path, String name) throws IOException {
+		File dir = new File(path);
+		if (!dir.exists() || !dir.isDirectory()) {
+		    throw new IOException("Diretório inválido");
+		}
 		File arq = new File(path, name);
 		if(arq.exists() && arq.isFile()) {
 			FileInputStream flow = new FileInputStream(arq);
